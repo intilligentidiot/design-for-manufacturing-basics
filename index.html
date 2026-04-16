@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design for Manufacturing Basics | Tesla Mechanical Designs</title>
-    <meta name="description" content="Learn the fundamentals of Design for Manufacturing (DFM) and why it's a critical mindset for modern engineering. Improve quality and reduce costs.">
-    
+    <meta name="description"
+        content="Learn the fundamentals of Design for Manufacturing (DFM) and why it's a critical mindset for modern engineering. Improve quality and reduce costs.">
+
     <!-- SEO & Open Graph -->
     <link rel="canonical" href="https://teslamechanicaldesigns.com/blog/dfm-basics">
     <meta property="og:title" content="Design for Manufacturing Basics | Tesla Mechanical Designs">
-    <meta property="og:description" content="Master the core principles of DFM to streamline production and reduce manufacturing costs.">
+    <meta property="og:description"
+        content="Master the core principles of DFM to streamline production and reduce manufacturing costs.">
     <meta property="og:image" content="images/dfm-basics.png">
     <meta name="twitter:card" content="summary_large_image">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --primary: #2563eb;
@@ -58,7 +62,12 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Roboto', sans-serif;
             color: var(--text);
             margin-top: 2rem;
@@ -106,7 +115,8 @@
             transition: color 0.2s;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--primary);
         }
 
@@ -141,7 +151,10 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: linear-gradient(0deg, var(--bg) 0%, transparent 100%);
             z-index: 1;
         }
@@ -156,8 +169,15 @@
         }
 
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Layout */
@@ -262,29 +282,57 @@
             .container {
                 grid-template-columns: 1fr;
             }
+
             aside {
                 order: 2;
             }
+
             .sidebar-sticky {
                 position: static;
             }
         }
 
         @media (max-width: 768px) {
-            nav { padding: 0.75rem 1rem; }
-            .nav-links { display: none; }
+            nav {
+                padding: 0.75rem 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
+
 <body>
     <nav>
         <a href="/" class="logo">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
             Tesla Mechanical Designs
         </a>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-            <svg id="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            <svg id="sun" style="display:none" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg id="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sun" style="display:none" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
         </button>
     </nav>
 
@@ -295,14 +343,25 @@
     <div class="container">
         <main>
             <article class="post-content">
-                <p>Design for Manufacturing, or DFM, is the practice of designing parts and products to be manufactured efficiently, consistently, and at the right cost. It is not only about making a part work on paper, but also about ensuring it can be produced using real manufacturing methods without unnecessary complexity, waste, or delay.</p>
+                <p><a href="https://www.teslamechanicaldesigns.com/blog/top-design-tips-for-design-for-manufacturing-dfm/"
+                        class="internal-link" title="Top Design Tips for Design for Manufacturing">Design for
+                        Manufacturing</a>, or DFM, is the practice of designing parts and products to be manufactured
+                    efficiently, consistently, and at the right cost. It is not only about making a part work on paper,
+                    but also about ensuring it can be produced using real manufacturing methods without unnecessary
+                    complexity, waste, or delay.</p>
 
-                <p>At Tesla Mechanical Designs, we treat DFM as a core part of the design process, not as a final check after the design is complete. That approach helps reduce expensive changes later and improves the chances that a part will move smoothly from concept to production.</p>
+                <p>At Tesla Mechanical Designs, we treat DFM as a core part of the design process, not as a final check
+                    after the design is complete. That approach helps reduce expensive changes later and improves the
+                    chances that a part will move smoothly from concept to production.</p>
 
-                <img src="images/dfm-basics.png" alt="A professional 3D technical illustration showing a mechanical part being designed for manufacturing (DFM)" loading="lazy">
+                <img src="images/dfm-basics.png"
+                    alt="A professional 3D technical illustration showing a mechanical part being designed for manufacturing (DFM)"
+                    loading="lazy">
 
                 <h2 id="what-dfm-means">What DFM Means</h2>
-                <p>DFM means aligning the product design with the chosen manufacturing process from the beginning. A part may look good in a CAD model, but still be difficult to machine, mold, cast, print, or assemble. DFM forces the engineer to consider those realities early.</p>
+                <p>DFM means aligning the product design with the chosen manufacturing process from the beginning. A
+                    part may look good in a CAD model, but still be difficult to machine, mold, cast, print, or
+                    assemble. DFM forces the engineer to consider those realities early.</p>
 
                 <p>In practical terms, DFM asks questions like:</p>
                 <ul>
@@ -311,17 +370,25 @@
                     <li>Will the part require unnecessary setups or rework?</li>
                     <li>Are there feature choices that increase cost without improving function?</li>
                 </ul>
-                <p>These questions matter because many manufacturing problems are created before production even starts.</p>
+                <p>These questions matter because many manufacturing problems are created before production even starts.
+                </p>
 
                 <h2 id="why-dfm-matters">Why DFM Matters</h2>
-                <p>Most manufacturing costs are determined during the design stage. Material selection, part geometry, tolerances, wall thickness, draft, and process choice all affect cost, quality, and lead time. If the design is difficult to manufacture, production will usually become more expensive and less predictable.</p>
+                <p>Most manufacturing costs are determined during the design stage. Material selection, part geometry,
+                    tolerances, wall thickness, draft, and process choice all affect cost, quality, and lead time. If
+                    the design is difficult to manufacture, production will usually become more expensive and less
+                    predictable.</p>
 
-                <p>DFM also improves consistency. A part that is easy to make is usually easier to repeat at scale. That reduces variation, lowers scrap, and improves delivery reliability.</p>
+                <p>DFM also improves consistency. A part that is easy to make is usually easier to repeat at scale. That
+                    reduces variation, lowers scrap, and improves delivery reliability.</p>
 
                 <h2 id="when-to-apply">When to Apply DFM</h2>
-                <p>DFM should begin at the earliest design stage. It should not wait until prototyping, quoting, or tooling release. Even rough concepts should be reviewed with manufacturing in mind.</p>
+                <p>DFM should begin at the earliest design stage. It should not wait until prototyping, quoting, or
+                    tooling release. Even rough concepts should be reviewed with manufacturing in mind.</p>
 
-                <p>Some details may still be finalized later by toolmakers, machinists, or fabricators. However, the main design direction should already fit the manufacturing process. If the core design is wrong, later fixes usually cost more and may limit performance.</p>
+                <p>Some details may still be finalized later by toolmakers, machinists, or fabricators. However, the
+                    main design direction should already fit the manufacturing process. If the core design is wrong,
+                    later fixes usually cost more and may limit performance.</p>
 
                 <h3 id="core-questions">Core DFM Questions Engineers Should Ask</h3>
                 <p>A good DFM review usually starts with a few basic questions:</p>
@@ -336,14 +403,20 @@
                 <p>These questions apply to almost every product, regardless of industry.</p>
 
                 <h2 id="mindset">DFM Is a Mindset</h2>
-                <p>DFM is not a single rule or checklist. It is a mindset that combines design intent with manufacturing reality. That mindset improves through experience, peer review, and feedback from suppliers, machinists, mold designers, and assembly teams.</p>
+                <p>DFM is not a single rule or checklist. It is a mindset that combines design intent with manufacturing
+                    reality. That mindset improves through experience, peer review, and feedback from suppliers,
+                    machinists, mold designers, and assembly teams.</p>
 
-                <p>The best DFM work usually happens when engineers think beyond shape and performance and also consider process, tooling, and repeatability. That is where strong product design becomes practical production design.</p>
+                <p>The best DFM work usually happens when engineers think beyond shape and performance and also consider
+                    process, tooling, and repeatability. That is where strong product design becomes practical
+                    production design.</p>
 
                 <h2 id="better-products">How DFM Supports Better Products</h2>
-                <p>A good DFM approach makes products easier to manufacture, assemble, and inspect. It also reduces the chance of late-stage redesign, which often causes delays and extra cost.</p>
+                <p>A good DFM approach makes products easier to manufacture, assemble, and inspect. It also reduces the
+                    chance of late-stage redesign, which often causes delays and extra cost.</p>
 
-                <p>When DFM is used correctly, the final result is not just a technically valid part. It is a part that can be produced with confidence, consistency, and efficiency.</p>
+                <p>When DFM is used correctly, the final result is not just a technically valid part. It is a part that
+                    can be produced with confidence, consistency, and efficiency.</p>
             </article>
         </main>
 
@@ -373,7 +446,7 @@
         const toggleBtn = document.getElementById('theme-toggle');
         const sun = document.getElementById('sun');
         const moon = document.getElementById('moon');
-        
+
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
             sun.style.display = 'block';
@@ -394,7 +467,7 @@
         // TOC Generation Logic
         const tocList = document.getElementById('toc-list');
         const headers = document.querySelectorAll('main h2, main h3');
-        
+
         headers.forEach(header => {
             const li = document.createElement('li');
             const a = document.createElement('a');
@@ -403,11 +476,11 @@
             a.href = `#${id}`;
             a.textContent = header.textContent;
             li.appendChild(a);
-            
+
             if (header.tagName === 'H3') {
                 li.style.paddingLeft = '1rem';
             }
-            
+
             tocList.appendChild(li);
         });
     </script>
@@ -435,4 +508,5 @@
     }
     </script>
 </body>
+
 </html>
